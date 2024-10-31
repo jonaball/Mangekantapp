@@ -1,3 +1,6 @@
+pip==24.3.1
+    #laster ned nyeste versjon av pip
 inquirer==3.4.0
     #laster ned et bibliotek for multiple choice input, version 3.4.0 (manuelt: pip install inquirer)
+
     
