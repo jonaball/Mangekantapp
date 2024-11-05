@@ -55,9 +55,7 @@ if svar2['operasjon'] == "Regne Areal":
 
         
     if mangekant_select == "rektangel":
-        grunnlinje = int(input("Bredde: "))
-        høyde = int(input("Høyde: "))
-        print(f.arealRektangel(grunnlinje, høyde))
+
         b = int(input("Bredde: "))
         h = int(input("Høyde: "))
         print(f.arealRektangel(b, h))
