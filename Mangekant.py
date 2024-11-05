@@ -1,4 +1,4 @@
-import math as m
+import math
 
 # ------------ Hovedklasse ----------- #
 
@@ -13,7 +13,6 @@ class Mangekant:
         return f'{self.navn} har {self.antall_sider} sider, sidene har lengdene {self.sidelengder} og omkretsen er {self.omkrets()}'
 
 # Funksjoner for enklere bruk og definering av mangekanter
-# Kanskje flytte disse inn i sine egne underklasser (eksempel: rekt_define() inn i Rektangel() klassen)?
 # I stedet for å appende objektene til en liste, la oss skrive det i et document så det blir lagret. bruke open() og .write()
 mangekanter = []
 def rekt_define():
@@ -50,26 +49,6 @@ class Trekant(Mangekant):
         super().__init__(navn, antall_sider, sidelengder)
     def arealtrekant(self):
         s = self.omkrets() * 0.5  
-        return round(m.sqrt(s * (s - self.sidelengder[0]) * (s - self.sidelengder[1]) * (s - self.sidelengder[2])),1)
+        return round(math.sqrt(s * (s - self.sidelengder[0]) * (s - self.sidelengder[1]) * (s - self.sidelengder[2])),1)
     def vistrekant(self):
         return f'{self.navn}: Sidelengder: {self.sidelengder}, Areal:{self.arealtrekant()}'
-
-
-
-def arealTrekant(grunnlinje, hoyde):
-    return grunnlinje * hoyde * 0.5
-
-
-
-
-# Arealet av kvadrat
-def arealKvadrat(side):
-    return side^2
-
-
-
-# Areal av Rektangel
-def arealRektangel(grunnlinje, hoyde):
-    return grunnlinje * hoyde
-
-

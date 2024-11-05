@@ -40,14 +40,17 @@ if svar2['operasjon'] == "Regne Areal":
         side_liste.append(side1)
         side_liste.append(side2)
         side_liste.append(side3)
-        print(m.arealtrekant(side_liste))
+        print(m.Trekant.arealtrekant(side_liste))
     if mangekant_select == "rektangel":
+        grunnlinje = int(input("Bredde: "))
+        høyde = int(input("Høyde: "))
+        print(f.arealRektangel(grunnlinje, høyde))
         b = int(input("Bredde: "))
         h = int(input("Høyde: "))
         print(f.arealRektangel(b, h))
     if mangekant_select == "kvadrat":
-        s = int(input("Sidelengde: "))
-        print(f.arealKvadrat())
+        side = int(input("Sidelengde: "))
+        print(f.arealKvadrat(side))
 
 if svar2['operasjon'] == "Regne Omkrets":
     print("Ikke implementert")
