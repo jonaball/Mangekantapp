@@ -33,9 +33,14 @@ svar2 = inq.prompt(spørsmål2)
 
 if svar2['operasjon'] == "Regne Areal":
     if mangekant_select == "trekant":
-        g = int(input("Grunnlinje lengde: "))
-        h = int(input("Høyde lengde: "))
-        print(f.arealTrekant(g, h))
+        side_liste=[]
+        side1 = int(input("Lengden til side 1: "))
+        side2 = int(input("Lengden til side 2: "))
+        side3 = int(input("Lengden til side 3: "))
+        side_liste.append(side1)
+        side_liste.append(side2)
+        side_liste.append(side3)
+        print(m.arealtrekant(side_liste))
     if mangekant_select == "rektangel":
         b = int(input("Bredde: "))
         h = int(input("Høyde: "))
