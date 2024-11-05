@@ -33,16 +33,16 @@ svar2 = inq.prompt(spørsmål2)
 
 if svar2['operasjon'] == "Regne Areal":
     if mangekant_select == "trekant":
-        g = int(input("Grunnlinje lengde: "))
-        h = int(input("Høyde lengde: "))
-        print(f.arealTrekant(g, h))
+        grunnlinje = int(input("Grunnlinje lengde: "))
+        høyde = int(input("Høyde lengde: "))
+        print(f.arealTrekant(grunnlinje, høyde))
     if mangekant_select == "rektangel":
-        b = int(input("Bredde: "))
-        h = int(input("Høyde: "))
-        print(f.arealRektangel(g, h))
+        grunnlinje = int(input("Bredde: "))
+        høyde = int(input("Høyde: "))
+        print(f.arealRektangel(grunnlinje, høyde))
     if mangekant_select == "kvadrat":
-        s = int(input("Sidelengde: "))
-        print(f.arealKvadrat())
+        side = int(input("Sidelengde: "))
+        print(f.arealKvadrat(side))
 
 if svar2['operasjon'] == "Regne Omkrets":
     print("Ikke implementert")

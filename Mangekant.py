@@ -13,7 +13,6 @@ class Mangekant:
         return f'{self.navn} har {self.antall_sider} sider, sidene har lengdene {self.sidelengder} og omkretsen er {self.omkrets()}'
 
 # Funksjoner for enklere bruk og definering av mangekanter
-# Kanskje flytte disse inn i sine egne underklasser (eksempel: rekt_define() inn i Rektangel() klassen)?
 # I stedet for å appende objektene til en liste, la oss skrive det i et document så det blir lagret. bruke open() og .write()
 mangekanter = []
 def rekt_define():
@@ -53,25 +52,3 @@ class Trekant(Mangekant):
         return round(m.sqrt(s * (s - self.sidelengder[0]) * (s - self.sidelengder[1]) * (s - self.sidelengder[2])),1)
     def vistrekant(self):
         return f'{self.navn}: Sidelengder: {self.sidelengder}, Areal:{self.arealtrekant()}'
-
-# Trenger vi disse?
-
-#  |
-#  |
-#  V
-
-# trekant_liste = []
-# trekant1 = Trekant("Trekant 1",3,[4,4.2,5])
-# trekant2 = Trekant("Trekant 2",3,[5,5.6,5.6])
-# trekant3 = Trekant("Trekant 3",3,[4,4,4])
-# trekant4 = Trekant("Trekant 4",3,[4,6,7])
-# trekant5 = Trekant("Trekant 5",3,[3,6.2,6.2])
-
-# trekant_liste.append(trekant1)
-# trekant_liste.append(trekant2)
-# trekant_liste.append(trekant3)
-# trekant_liste.append(trekant4)
-# trekant_liste.append(trekant5)
-
-# for ting in trekant_liste:
-#     print(ting.vistrekant())
