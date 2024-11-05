@@ -38,22 +38,20 @@ if svar2['operasjon'] == "Regne Areal":
     if mangekant_select == "trekant":
         # -- Spørmsål 3
         svar3 = inq.prompt(spørsmål3)
-        if svar3['operasjon'] == 'Ja':
-           side_liste=[]
-        side1 = int(input("Lengden til side 1: "))
-        side2 = int(input("Lengden til side 2: "))
-        side3 = int(input("Lengden til side 3: "))
-        side_liste.append(side1)
-        side_liste.append(side2)
-        side_liste.append(side3)
-        print(m.Trekant.arealtrekant(side_liste))
+        if svar3['trekant'] == 'Ja':
+            side_liste=[]
+            side1 = int(input("Lengden til side 1: "))
+            side2 = int(input("Lengden til side 2: "))
+            side3 = int(input("Lengden til side 3: "))
+            side_liste.append(side1)
+            side_liste.append(side2)
+            side_liste.append(side3)
+            print(m.Trekant.arealtrekant(side_liste))
+        if svar3['trekant'] == 'Nei':
+            g = int(input("Grunnlinje: "))
+            h = int(input("Høyde: "))
+            print(f.arealTrekant(g,h))
 
-    else:
-        g = int(input("Grunnlinje: "))
-        h = int(input("Høyde: "))
-        f.arealTrekant(g,h)
-
-        
     if mangekant_select == "rektangel":
         grunnlinje = int(input("Bredde: "))
         høyde = int(input("Høyde: "))
