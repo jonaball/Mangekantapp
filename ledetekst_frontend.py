@@ -1,4 +1,4 @@
-# dette er hvor en bruker kan lage mangekanter, og bruke funksjoner fra klassene for å regne med man
+# dette er hvor en bruker kan lage mangekanter, og bruke funksjoner fra klassene å regne med figurene
 import inquirer as inq
 import Klasser_og_funksjoner.Funksjoner_for_mangekanter as f
 import Klasser_og_funksjoner.Mangekant as m
