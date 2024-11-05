@@ -1,7 +1,7 @@
 # dette er hvor en bruker kan lage mangekanter, og bruke funksjoner fra klassene for å regne med man
 import inquirer as inq
-import Mangekantapp.Klasser_og_funksjoner.Funksjoner_for_mangekanter as f
-import Mangekantapp.Klasser_og_funksjoner.Mangekant as m
+import Klasser_og_funksjoner.Funksjoner_for_mangekanter as f
+import Klasser_og_funksjoner.Mangekant as m
 
 # ------------ Spørsmål ------------ #
 
@@ -39,9 +39,7 @@ if svar2['operasjon'] == "Regne Areal":
         # -- Spørmsål 3
         svar3 = inq.prompt(spørsmål3)
         if svar3['operasjon'] == 'Ja':
-            m.Trekant.arealtrekant # aner ikke hva jeg skal gjøre her enda
-        else:
-            side_liste=[]
+           side_liste=[]
         side1 = int(input("Lengden til side 1: "))
         side2 = int(input("Lengden til side 2: "))
         side3 = int(input("Lengden til side 3: "))
@@ -49,6 +47,13 @@ if svar2['operasjon'] == "Regne Areal":
         side_liste.append(side2)
         side_liste.append(side3)
         print(m.Trekant.arealtrekant(side_liste))
+
+    else:
+        g = int(input("Grunnlinje: "))
+        h = int(input("Høyde: "))
+        f.arealTrekant(g,h)
+
+        
     if mangekant_select == "rektangel":
         grunnlinje = int(input("Bredde: "))
         høyde = int(input("Høyde: "))
