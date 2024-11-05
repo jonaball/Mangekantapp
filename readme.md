@@ -6,7 +6,6 @@ Dette vil etter en stund være en funkjsonerende app for å lagre, kalkulere og 
 For at frontend skal fungere må du skrive i terminalen/ledetekst:
 pip install -r /Mangekantapp/requirements.txt
 
-
-Ting som må lages
-- Klasser for mangekantene
-- Funksjoner for utregning av areal
+### Ting som må lages
+- Funksjoner for utregning av omkrets
+- Read og Write til database.txt for å lagre mangekantene

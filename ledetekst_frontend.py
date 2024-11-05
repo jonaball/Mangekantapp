@@ -3,35 +3,31 @@ import inquirer as inq
 import Funksjoner_for_mangekanter
 import Mangekant
 
-spørsmål = [
-
-    # spørsmål[0]
-    inq.List('figur',
+spørsmål1 = inq.List('figur',
             message="Hvilken type mangekant velger du?",
             choices=['Trekant', 'Firkant', 'Femkant', 'Sekskant'],
         ), 
 
-    # spørsmål[1]
-    inq.List('operasjon',
+spørsmål2 = inq.List('operasjon',
              message="Hva slags operasjon vil du gjøre med mangekanten?",
-             choices=['Regne areal', 'Regne omkrets', "Lagre en Mangekant"],
+             choices=['Regne Areal', 'Regne Omkrets', "Lagre en Mangekant"],
         ),
- ]
 
-svar = inq.prompt(spørsmål)
+mangekant_select = "" #holder track over hvilken type mangekant som er valgt
 
-if svar['figur'] == 'Trekant':
-    # her går programmet videre hvis bruker har valgt trekant
-    print("test")
+svar1 = inq.prompt(spørsmål1)
+if svar1['figur'] == 'Trekant':
+    mangekant_select = "trekant"
 
-if svar['figur'] == 'Firkant':
-    # her går programmet videre hvis bruker har valgt firkant
-    print()
+if svar1['figur'] == 'Firkant':
+    mangekant_select = "firkant"
 
-if svar['figur'] == 'Femkant':
-    # her går programmet videre hvis bruker har valgt femkant
-    print()
+if svar1['figur'] == 'Femkant':
+    mangekant_select = "femkant"
 
-if svar['figur'] == 'Sekskant':
-    # her går programmet videre hvis bruker har valgt sekskant
-    print()
+if svar1['figur'] == 'Sekskant':
+    mangekant_select = "sekskant"
+
+svar2 = inq.prompt(spørsmål2)
+if svar2 == "Regne Areal":
+    
