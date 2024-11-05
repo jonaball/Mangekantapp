@@ -1,7 +1,7 @@
 # dette er hvor en bruker kan lage mangekanter, og bruke funksjoner fra klassene for å regne med man
 import inquirer as inq
-import Funksjoner_for_mangekanter as f
-import Mangekant as m
+import Mangekantapp.Klasser_og_funksjoner.Funksjoner_for_mangekanter as f
+import Mangekantapp.Klasser_og_funksjoner.Mangekant as m
 
 # ------------ Spørsmål ------------ #
 
