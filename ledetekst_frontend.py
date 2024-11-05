@@ -31,7 +31,7 @@ if svar1['figur'] == 'Kvadrat':
 
 svar2 = inq.prompt(spørsmål2)
 
-if svar2 == "Regne Areal":
+if svar2['operasjon'] == "Regne Areal":
     if mangekant_select == "trekant":
         g = int(input("Grunnlinje lengde: "))
         h = int(input("Høyde lengde: "))
@@ -44,10 +44,10 @@ if svar2 == "Regne Areal":
         s = int(input("Sidelengde: "))
         print(f.arealKvadrat())
 
-if svar2 == "Regne Omkrets":
+if svar2['operasjon'] == "Regne Omkrets":
     print("Ikke implementert")
 
-if svar2 == "Lagre en Mangekant":
+if svar2['operasjon'] == "Lagre en Mangekant":
     if mangekant_select =="trekant":
         m.trek_define()
 
