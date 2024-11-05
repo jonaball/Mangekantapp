@@ -24,7 +24,7 @@ def trek_define():
     mangekanter.append(trekant)
 
 def kvad_define():
-    kvadrat = Mangekant("Kvadrat",4,[int(x) for x in input(f"skriv inn sidelengdene til kravdratet (med en ',' i mellom): ").split(",")])
+    kvadrat = Mangekant("Kvadrat",4, int(input(f"skriv inn sidelengden til kravdratet: ")))
     mangekanter.append(kvadrat)
 
 # ----------- Underklasser ------------- #
