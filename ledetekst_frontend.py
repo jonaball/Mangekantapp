@@ -39,7 +39,7 @@ if svar2['operasjon'] == "Regne Areal":
     if mangekant_select == "rektangel":
         b = int(input("Bredde: "))
         h = int(input("Høyde: "))
-        print(f.arealRektangel(g, h))
+        print(f.arealRektangel(b, h))
     if mangekant_select == "kvadrat":
         s = int(input("Sidelengde: "))
         print(f.arealKvadrat())

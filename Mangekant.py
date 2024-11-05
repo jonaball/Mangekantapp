@@ -54,24 +54,22 @@ class Trekant(Mangekant):
     def vistrekant(self):
         return f'{self.navn}: Sidelengder: {self.sidelengder}, Areal:{self.arealtrekant()}'
 
-# Trenger vi disse?
 
-#  |
-#  |
-#  V
 
-# trekant_liste = []
-# trekant1 = Trekant("Trekant 1",3,[4,4.2,5])
-# trekant2 = Trekant("Trekant 2",3,[5,5.6,5.6])
-# trekant3 = Trekant("Trekant 3",3,[4,4,4])
-# trekant4 = Trekant("Trekant 4",3,[4,6,7])
-# trekant5 = Trekant("Trekant 5",3,[3,6.2,6.2])
+def arealTrekant(grunnlinje, hoyde):
+    return grunnlinje * hoyde * 0.5
 
-# trekant_liste.append(trekant1)
-# trekant_liste.append(trekant2)
-# trekant_liste.append(trekant3)
-# trekant_liste.append(trekant4)
-# trekant_liste.append(trekant5)
 
-# for ting in trekant_liste:
-#     print(ting.vistrekant())
+
+
+# Arealet av kvadrat
+def arealKvadrat(side):
+    return side^2
+
+
+
+# Areal av Rektangel
+def arealRektangel(grunnlinje, hoyde):
+    return grunnlinje * hoyde
+
+
