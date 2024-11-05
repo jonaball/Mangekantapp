@@ -8,7 +8,7 @@ import Mangekantapp.Klasser_og_funksjoner.Mangekant as m
 spørsmål1 = inq.List('figur',
             message="Hvilken type mangekant velger du?",
             choices=['Trekant', 'Rektangel', 'Kvadrat'],
-        ), 
+        ),
 mangekant_select = "" #holder track over hvilken type mangekant som er valgt
 
 spørsmål2 = inq.List('operasjon',
@@ -23,6 +23,7 @@ spørsmål3 = inq.List('trekant',
 
 # ------------ Svar-alternativer ----------- #
 
+# -- Spørmsål 1
 svar1 = inq.prompt(spørsmål1)
 if svar1['figur'] == 'Trekant':
     mangekant_select = "trekant"
@@ -31,12 +32,14 @@ if svar1['figur'] == 'Rektangel':
 if svar1['figur'] == 'Kvadrat':
     mangekant_select = "kvadrat"
 
+# -- Spørsmål 2
 svar2 = inq.prompt(spørsmål2)
 if svar2['operasjon'] == "Regne Areal":
     if mangekant_select == "trekant":
+        # -- Spørmsål 3
         svar3 = inq.prompt(spørsmål3)
         if svar3['operasjon'] == 'Ja':
-            m.Trekant.arealtrekant
+            m.Trekant.arealtrekant # aner ikke hva jeg skal gjøre her enda
         else:
             grunnlinje = int(input("Grunnlinje lengde: "))
             høyde = int(input("Høyde lengde: "))
@@ -48,10 +51,8 @@ if svar2['operasjon'] == "Regne Areal":
     if mangekant_select == "kvadrat":
         side = int(input("Sidelengde: "))
         print(f.arealKvadrat(side))
-
 if svar2['operasjon'] == "Regne Omkrets":
     print("Ikke implementert")
-
 if svar2['operasjon'] == "Lagre en Mangekant":
     if mangekant_select =="trekant":
         m.trek_define()
